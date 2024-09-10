@@ -1,25 +1,40 @@
 .button {
-  border-radius: var(--border-radius-default);
-  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
-  color: white;
-  cursor: pointer;
-  font-size: 0.9em;
-  font-weight: bold;
-  max-width: var(--width-input);
-  padding: 0.5em 1em;
-  margin: 0.5em 0;
-  transition: transform 0.1s ease;
-  width: 100%;
+    border-radius: var(--border-radius-default);
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    color: white;
+    cursor: pointer;
+    font-size: 0.9em;
+    font-weight: bold;
+    max-width: var(--width-input);
+    padding: 0.5em 1em;
+    margin: 0.5em 0;
+    transition: transform 0.1s ease;
+    width: 100%;
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .button:hover {
-  transform: scale(1.05);
+    transform: scale(1.05);
 }
 
 .button:active {
-  transform: scale(0.95);
+    transform: scale(0.95);
 }
 
-/** TODO: Create separate styles for .primary and .secondary variants of this button:
-* - Must use the CSS variables declared in App.css
-*/
+.button.primary {
+    background-color: var(--color-brand);
+    color: white;
+}
+
+.button.primary:hover {
+    filter: brightness(125%);
+}
+
+.button.secondary {
+    background-color: var(--color-accent);
+    color: black;
+}
+
+.button.secondary:hover {
+    filter: brightness(125%);
+}
